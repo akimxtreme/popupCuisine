@@ -53,7 +53,7 @@
 	// Detecta la URL Actual
 	var URLactual = window.location;
 	// Variable que tiene la url del home
-	var home = 'http://127.0.0.1/popup/';
+	var home = 'http://127.0.0.1:8080/popupCuisine/';
 	
 	if(URLactual == home){	
 		document.write("<div id='popupCuisine'>");
@@ -64,6 +64,10 @@
 	}/*else{
 		window.location.href = 'http://www.google.com'; 
 	}*/
+	// http://www.lacuisineusa.com/Default.asp
+	// http://www.lacuisineusa.com/
+	// https://www.lacuisineusa.com/Default.asp
+	// https://www.lacuisineusa.com/
 	</script>
 	
 </body>

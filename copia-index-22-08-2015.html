@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7 ie6" lang="en"><![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie7" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9 ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js ie9" lang="en"><!--<![endif]-->
+
+    <head>
+        <meta name="google-site-verification" content="HRB9cya3Krn_fzrQccbsHaUB0PF268e1EXZE7vfB6Lg" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta id="v65-layout-mode" data-cart="storedot" data-checkout="storedot" data-use-simplified-checkout="true">
+        
+        <!-- LOGO UPLOAD TOOL *** SET HEIGHT & WIDTH *** -->
+        <meta id="v65-logo-dimensions" data-width="190" data-height="69">
+
+        <!-- FRAMEWORK -->
+        <link href="v/vspfiles/templates/Taste/css/framework.css" rel="stylesheet">
+
+        <!-- TEMPLATE -->
+        <link href="v/vspfiles/templates/Taste/css/template.css" rel="stylesheet">
+
+        <!-- STOREFRONT -->
+        <link href="v/vspfiles/templates/Taste/css/storefront.css" rel="stylesheet">
+
+        <!-- HOMEPAGE -->
+        <div id="if_homepage">
+            <link href="v/vspfiles/templates/Taste/css/homepage.css" rel="stylesheet">
+            <!-- slider -->
+            <link rel="stylesheet" href="v/vspfiles/templates/Taste/owl/owl.carousel.css">
+            <link rel="stylesheet" href="v/vspfiles/templates/Taste/owl/owl.transitions.css">
+        </div>
+
+        <!-- DESIGN TOOLKIT -->
+        <script src="v/vspfiles/templates/Taste/js/design-toolkit_min.js"></script>
+        <script>DTK.loadCSS("Taste");</script>
+        <!-- PICTUREFILL PLYFILL -->
+        <script>
+            // Picture element HTML5 shiv
+            document.createElement( "picture" );
+    </script>
+        <script src="v/vspfiles/templates/Taste/js/picturefill.min.js" async=""></script>
+
+        <!--[if lt IE 9]>
+          <script src="v/vspfiles/templates/Taste/js/html5shiv.js"></script>
+        <![endif]-->
+    <script> 
+        $(function(){
+            $("#svgIncludes").load("v/vspfiles/templates/Taste/images/template/svgdefs.svg"); 
+        });
+    </script> 
+
+   <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49280968-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- popup estilos -->
+<style type="text/css">
+	 #cover { position:fixed; top:0; left:0; background:rgba(0,0,0,0.6); z-index:5; width:100%; height:100%; /*display:none; */	} 
+	 #popup { cursor:pointer; height:500px; width:700px; margin:6% auto 0 auto; position:relative; z-index:9999; /*display:none; */ background: url(banner-popup-LCA.jpg) no-repeat; border:5px solid #cccccc; border-radius:10px; transition: opacity 200ms; } 
+	 .cancel { display:block; position:absolute; top:3px; right:2px; background:rgb(245,245,245); color:black; height:30px; width:35px; font-size:30px; text-decoration:none; text-align:center; font-weight:bold; }
+	 .cancel:hover { color: #E52822;transition: all 0.5s ease-out;}	
+ </style>
+    </head>
+
+    <!-- ========== Taste ======================
+        DESIGNER: WA
+        DEVELOPER: KT
+        CODE DATE: 2014-11
+    ========================================= -->
+
+  <body>
+    <span style="display:none;" id="svgIncludes"></span>
+
+    <noscript id="no-js-notice">
+      To take full advantage of this site, please enable your browser's JavaScript feature. <a href="http://launchpad.volusion.com/kb_results.asp?ID=42" target="_blank">Learn how</a>
+    </noscript>
+
+    <nav class="menu push-menu slide-menu-left">
+        <div class="push-menu__close-btn close-menu">
+            <span class="close-menu__inner glyphicon glyphicon-remove"></span>
+        </div>
+        <div class="search-mobile">
+            <form class="form-inline" action="/SearchResults.asp" method="get" name="SearchBoxForm" role="search">
+              <div class="form-group">
+                <input type="text" name="Search" class="search-mobile__input" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}">
+                <button type="submit" name="Submit" class="btn btn-xs btn-primary search-mobile__submit"><svg class="icon-search"><use xlink:href="#icon-search"></use></svg></button>
+              </div>
+            </form>
+        </div>
+        <h3><div id="Menu1_Titlem" class="menu_title">Menu </div></h3>
+        <div id="display_menu_1">
+        </div>
+        <ul class="nav-list nav-tools" data-v-edit-region="nav tools links">
+            <li class="mobile-nav-cart"><a href="/shoppingcart.asp" title="Your Cart" rel="nofollow"><svg class="icon-cart"><use xlink:href="#icon-cart"></use></svg> Su Carro</a></li>
+            <li class="mobile-nav-account"><a href="/myaccount.asp" title="cuenta" rel="nofollow"> <svg class="icon-account"><use xlink:href="#icon-account"></use></svg>cuenta</a></li>
+        </ul><!-- .nav-tools -->
+
+        <ul class="nav-list nav-social" data-v-edit-region="nav tools social">
+            <li class="list-title">Conéctate con nosotros</li>
+            <li><a class="fb" href="https://www.facebook.com/Volusion" target="_blank" rel="nofollow"><svg class="icon-fb"><use xlink:href="#icon-fb"></use></svg></a></li>
+            <li><a class="tw" href="https://Twitter.com/Volusion" target="_blank" rel="nofollow"><svg class="icon-tw"><use xlink:href="#icon-tw"></use></svg></a></li>
+            <li><a class="ig" href="http://instagram.com/Volusion" target="_blank" rel="nofollow"><svg class="icon-ig"><use xlink:href="#icon-ig"></use></svg></a></li>
+            <li><a class="pt" href="http://www.pinterest.com/Volusion" target="_blank" rel="nofollow"><svg class="icon-pt"><use xlink:href="#icon-pt"></use></svg></a></li>
+        </ul><!-- .nav-social -->
+    </nav><!-- /slide menu left -->
+
+    <div class="page-wrap clearfix">
+
+        <header class="header-container clearfix">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <!-- <button class="nav-toggler toggle-push-left">Slide Menu Left</button> -->
+                        <span class="button-wrap col-xs-2 sm-up-no-padding col-sm-4 col-md-2 col-lg-2">
+                            <button type="button" class="navbar-toggle nav-toggler toggle-slide-left" data-toggle="collapse">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar__wrap">
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </span>
+                                <span class="xs-hide menu-text">menú</span>
+                            </button>
+                            
+                        </span>
+
+                        <div class="xs-hide sm-hide promo-shipping sm-up-no-padding col-sm-4 col-md-3 col-lg-3" data-v-edit-region="Header Shipping"><span class="large"><a href="/articles.asp?ID=57" title="Disfrute Envio Puerta a Puerta " rel="nofollow">Disfrute Envio A Su Casa</a></span></div>
+
+                        <!-- GRAPHIC LOGO -->
+                        <div id="if_homepage">
+                        <h1 class="logo col-xs-8 col-sm-4 col-md-2 col-lg-2"><a href="/">
+                        <img class="img-responsive" src="/v/vspfiles/templates/Taste/images/template/header_bg.png" alt="Config_WebsiteTitle"></a>
+                        </h1>
+                        </div>
+                        <div id="if_not_homepage">
+                        <div class="logo col-xs-8 col-sm-4 col-md-2 col-lg-2">
+                        <a href="/"><img class="img-responsive" src="/v/vspfiles/templates/Taste/images/template/header_bg.png" alt="Config_WebsiteTitle"></a>
+                        </div>
+                        </div>
+
+                        <!-- TEXT LOGO -->
+                        <!--<div id="if_homepage">
+                            <h1 class="logo col-xs-8 col-sm-4 col-md-2 col-lg-2"><a href="/"><span id="display_homepage_title" class="">taste</span></a>
+                            </h1>
+                        </div>
+
+                        <div id="if_not_homepage">
+                            <div class="logo col-xs-8 col-sm-4 col-md-2 col-lg-2">
+                                <a href="/"><span id="display_homepage_title" class="">taste</span></a>
+                            </div>
+                        </div>-->
+                        <div class="xs-hide sm-hide col-sm-3 col-md-3 col-lg-3 sm-up-no-padding">
+                        <div class="site-search">
+                            <form action="/searchresults.asp" method="get" name="SearchBoxForm">
+                                <input type="text" name="Search" class="site-search__input" value="Buscar..." onfocus="if (this.value == 'Buscar...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar...';}">
+                                <button type="submit" name="Submit" class="site-search__submit" value="Submit"><svg class="icon-search"><use xlink:href="#icon-search"></use></svg></button>
+                            </form>
+                        </div><!-- .site-search -->
+                    </div><!-- .search-col -->
+
+                    <nav class="site-tools col-xs-2 col-sm-4 col-md-2 col-lg-2 sm-up-no-padding xs-no-padding" data-v-anchor="cart" data-v-edit-region="Site Tools">
+                        <ul>
+                            <li class="xs-hide"><a href="/myaccount.asp" title="cuenta" rel="nofollow"><svg class="icon-account"><use xlink:href="#icon-account"></use></svg> cuenta</a></li>
+                            <li>
+                                <span class="cart-summary" data-v-anchor="cart">
+                                    <a href="/shoppingcart.asp" class="cart-summary__link">
+                                        <span class="cart-summary__icon"><svg class="icon-cart"><use xlink:href="#icon-cart"></use></svg></span>
+                                        <span class="cart-summary__count" data-v-observable="cart-count">0</span>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
+                    </nav>
+                    </div>
+
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
+
+        <main class="container sm-down-no-padding md-up-no-padding main-container" role="main">
+            <div id="content_area" class="clearfix">
+
+            </div><!-- #content_area -->
+        </main>
+        
+        <footer class="footer row xs-no-margin sm-no-margin md-no-margin lg-no-margin clearfix">
+            <div class="footer-top clearfix">
+                <div class="column col-1 col-xs-12 col-sm-4 col-md-4 col-lg-4 xs-no-padding" data-v-edit-region="Footer Column1 Links">
+                    <div class="col-xs-2"></div>
+                    <div class="col-xs-8 col-sm-10 col-md-10 col-lg-10 xs-no-padding sm-up-no-padding">
+                        <h2 class="footer-header">La Cuisine</h2>
+                        <ul class="left">
+                            <li><a href="/aboutus.asp" title="Acerca de Nosotros">Acerca de Nosotros</a></li>
+                            <li><a href="mailto:Config_EmailAddress_From?Subject=Contact%20Us" title="Contáctenos" rel="nofollow">Contáctenos</a></li>
+                            <li><a href="/terms_privacy.asp" title="Política de Privacidad" rel="nofollow">Política de Privacidad</a></li>
+                            <li><a href="/terms.asp" title="Términos & Condiciones" rel="nofollow">Términos & Condiciones</a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a href="/login.asp" title="Iniciar Sesión" rel="nofollow">Iniciar Sesión</a></li>
+                            <li><a href="/orders.asp" title="Order Status" rel="nofollow">Rastreo de Orden</a></li>
+                            <li><a href="/wishlist.asp" title="Lista de deseos" rel="nofollow">Lista de deseos</a></li>
+                            <li><a href="/articles.asp?ID=57" title="Información de envío" rel="nofollow">Información de envío</a></li>
+                        </ul>
+                    </div><!-- .col-xs-8 -->
+                    <div class="col-xs-2"></div>
+                </div><!-- .col-1 -->
+                
+                <div class="column col-2 col-xs-12 col-sm-4 col-md-4 col-lg-4 xs-no-padding" data-v-edit-region="Footer Column2 Links">
+                    <div class="col-xs-2 sm-up-hide"></div>
+                    <div class="col-xs-8 col-sm-12 col-md-12 xs-no-padding">
+                    <h3 class="footer-subheader">Conéctate con nosotros</h3>
+                        <ul class="social-links">
+                            <li><a class="fb" href="https://www.facebook.com/LaCuisineAppliancesVE" target="_blank" rel="nofollow"><span class="ftr-icon"><svg class="icon-fb"><use xlink:href="#icon-fb"></use></svg></span>Facebook</a></li>
+                            <li><a class="tw" href="https://Twitter.com/LCA_Venezuela" target="_blank" rel="nofollow"><span class="ftr-icon"><svg class="icon-tw"><use xlink:href="#icon-tw"></use></svg></span>Twitter</a></li>
+                            <li><a class="ig" href="http://instagram.com/Volusion" target="_blank" rel="nofollow"><span class="ftr-icon"><svg class="icon-ig"><use xlink:href="#icon-ig"></use></svg></span>Instagram</a></li>
+                            <li><a class="pt" href="http://www.pinterest.com/Volusion" target="_blank" rel="nofollow"><span class="ftr-icon"><svg class="icon-pt"><use xlink:href="#icon-pt"></use></svg></span>Pinterest</a></li>
+                        </ul>
+                    </div><!-- .col-xs-8 -->
+                    <div class="col-xs-2 sm-up-hide"></div>
+                </div><!-- .col-2 -->
+
+                <div class="column col-3 col-xs-12 col-sm-4 col-md-4 col-lg-4" data-v-edit-region="Footer Newsletter">
+                            <h3 class="footer-subheader elist__title">Unase a Nuestras Noticias</h3>
+                    <div class="elist">
+                        <form name="MailingList" method="post" action="/MailingList_subscribe.asp">
+                            <input type="text" name="emailaddress" class="elist__input" value="Su dirección de correo electrónico..." onfocus="if (this.value == 'Su dirección de correo electrónico...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Su dirección de correo electrónico...';}">
+                            <button type="submit" name="Submit" class="elist__submit" value=""><svg class="icon-envelope"><use xlink:href="#icon-envelope"></use></svg></button>
+                        </form>
+                    </div><!--.elist-->
+                </div><!-- .col-3 -->
+            </div><!-- .footer-top -->
+
+            <div class="footer-bottom row xs-no-margin sm-no-margin md-no-margin lg-no-margin clearfix">
+                <div class="footer-bottom__wrapper clearfix">
+                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 lg-no-padding">
+                    <svg class="icon-volusion-ssl"><use xlink:href="#icon-volusion-ssl"></use></svg>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 lg-no-paddingr sm-no-padding">
+                    <ul class="credit-cards">
+                        <li class="cc"><svg class="icon-visa icon"><use xlink:href="#icon-visa"></use></svg><span class="hide">Visa</span></li>
+                        <li class="cc"><svg class="icon-discover icon"><use xlink:href="#icon-discover"></use></svg><span class="hide">Discover</span></li>
+                        <li class="cc"><svg class="icon-amex icon"><use xlink:href="#icon-amex"></use></svg><span class="hide">American Express</span></li>
+                        <li class="cc"><svg class="icon fill icon-mastercard"><use xlink:href="#icon-mastercard"></use></svg><span class="hide">MC</span></li>
+                        <li class="cc"><svg class="icon icon-paypal"><use xlink:href="#icon-paypal"></use></svg><span class="hide">PayPal</span></li>
+                    </ul>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" data-v-edit-region="copyright">
+                    <div class="copyright">
+                    <a href="/terms.asp" title="Terms">derechos de autor &copy; <span class="insertYear">2015</span>&nbsp;Config_CompanyNameLegal. Todos Los Derechos Reservados.</a>
+
+                    <span id="if_homepage">Built with <a href="http://www.volusion.com" target="_blank">Volusion</a>..</span>
+
+                    <span id="if_not_homepage">Built with <a href="http://www.volusion.com" target="_blank" rel="nofollow">Volusion</a>.</span>
+                </div> <!-- .copyright -->
+                </div>
+            </div><!-- .footer-bottom__wrapper -->
+            </div><!-- .footer-bottom -->
+        </footer>
+
+
+    </div><!-- .page-wrap -->
+
+<script src="/v/vspfiles/templates/Taste/js/vol-buttons.js"></script>
+
+    <script src="v/vspfiles/templates/Taste/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    jQuery("#v65-onepage-editcart").text(function () {
+        return jQuery(this).text().replace("Edit", "editar"); 
+    });
+	 jQuery("#v65-onepage-cartsummary-label").text(function () {
+        return jQuery(this).text().replace("Your Order", "Su Pedido"); 
+    });
+	 jQuery(".v65-onepage-ordersummary-itemname.v65-onepage-ordersummary-header").text(function () {
+        return jQuery(this).text().replace("Item", "artículo"); 
+    });
+   jQuery("#PaymentMethodTypeDisplay option[value='']").text(function () {
+        return jQuery(this).text().replace("Select", "seleccionar"); 
+   });
+     jQuery("#v65-cart-shipping-details-label").text(function () {
+        return jQuery(this).text().replace("Calculate Shipping", "calcular envío"); 
+   });
+     jQuery("#v65-cart-shipping-details-label").text(function () {
+        return jQuery(this).text().replace("optional", "opcional"); 
+   });
+     jQuery("#ShipState_Text").text(function () {
+        return jQuery(this).text().replace("State", "Ciudad/Estado"); 
+   });
+	jQuery('h2#v65-onepage-header') .hide();
+	jQuery('<div id="v65-onepage-header">Revisa</div>') .insertAfter('#v65-onepage-breadcrumb');
+}); 
+</script>
+    
+    <script src="v/vspfiles/templates/Taste/js/min/fpslide.min.js"></script>
+    <script src="/v/vspfiles/templates/Taste/owl/owl.carousel.min.js"></script>
+    <script>
+        var $jQueryModern = jQuery.noConflict(true);
+        // Intialize Featured Product Slider
+        (function($){
+            $(document).ready(function() {
+                $('#fpslider').fpslide(
+                    //Volusion options
+                    {
+                        
+                        itemsTotal: 20,             // the total number of items to display from the XML
+                        priceBefore: 'Our Price: ', // the text to show before the price
+                        saleBefore: 'Sale Price: '  // the text to show before the sale price,
+                    },
+                    //Owl Slider Options
+                    {
+                        items: 4,  // items per page
+                        navigation: true, // Show prev/next buttons
+                        responsive: true, // Disabling responsiveness until we switch to responsive templates
+                        pagination: false,
+                        itemsDesktop: [1200,4],
+                        itemsDesktopSmall: [992,4],
+                        itemsTablet: [768,2],
+                        itemsMobile: [480,1]
+                    }
+                );
+            });
+        })($jQueryModern);
+    </script>
+
+
+
+
+    <script src="v/vspfiles/templates/Taste/js/framework/bootstrap.min.js"></script>
+
+    <script src="v/vspfiles/templates/Taste/js/push-menu/nav.js"></script>
+
+    <script src="v/vspfiles/templates/Taste/js/plugins.js"></script>
+
+    <!-- PAYPAL BUTTON UPDATE -->
+    <script>
+        $(document).ready(function() {
+            $('[src$="/btn_xpressCheckout2.gif"]').attr("src", "/v/vspfiles/templates/Taste/images/template/btn_xpressCheckout2.png");
+        });
+        $( ".category-col1 h2" ).click(function() {
+          $( ".category-col1 ul" ).slideToggle( "slow");
+        });
+    </script>
+
+  </body>
+</html>
